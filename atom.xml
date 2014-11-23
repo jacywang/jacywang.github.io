@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-23T15:58:50-05:00</updated>
+  <updated>2014-11-23T17:34:20-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -12,5 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Start My New Journey]]></title>
+    <link href="http://jacywang.github.io/blog/2014/11/23/start-my-new-journey/"/>
+    <updated>2014-11-23T16:25:29-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/11/23/start-my-new-journey</id>
+    <content type="html"><![CDATA[<p>Today is Nov 23rd, 2014 and I just finished Lesson 3 on TeaLeaf Academy.</p>
+
+<p>It has been three weeks since I joined the program and I was surprised by the progress I made. In three weeks, I built up three games in two different approach, procedural and OO. Then game Blackjack was upgraded from the command line to the web by using Sinatra. And today I have my own blog based on <a href="http://octopress.org/">Octopress</a>. This is awesome!</p>
+
+<p>Before joining the program, I have been going through different tutorials online but in the end, I&rsquo;m still wondering where I should start and lacking confidence in building up web applications. After doing a lot of research and visiting bootcamps in Toronto, I chose TeaLeaf because it&rsquo;s online, cheaper and I don&rsquo;t need to quit my full time job. Its alumni also gave very positive feedback.</p>
+
+<p>Why am I doing this? To make more money. Yes, that&rsquo;s why I started. But as I get more and more knowledge and practice, it becomes more and more interesting for me. I love it! Two hours a day from Monday to Friday and over 10 hours in the weekend were spent on it. I&rsquo;m addicted to it, like chocolate.</p>
+
+<p>I know it&rsquo;s a long process and requires patience and commitment to become really good at it. But it&rsquo;s never too late to start. I would like to record this experience and write down the tips I learnt and mistakes I made.</p>
+
+<p><code>Hello world!</code></p>
+]]></content>
+  </entry>
   
 </feed>
