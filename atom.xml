@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-26T23:29:05-05:00</updated>
+  <updated>2014-11-26T23:33:49-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -34,7 +34,7 @@
 </ol>
 
 
-<p><strong>Concepts and tips to note</strong></p>
+<h2>Concepts and tips to note</h2>
 
 <ul>
 <li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name</p></li>
@@ -51,13 +51,11 @@
 
 
 <ul>
-<li>Variable scope</li>
+<li>Variable scope <strong>More is coming shortly</strong></li>
 </ul>
 
 
-<p><strong>More is coming shortly</strong></p>
-
-<p><strong>Tools and resources</strong></p>
+<h2>Tools and resources</h2>
 
 <ul>
 <li><p><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></p></li>
