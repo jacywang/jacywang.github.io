@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-26T23:24:20-05:00</updated>
+  <updated>2014-11-26T23:29:05-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -24,16 +24,24 @@
 
 <p>For future reference, I will list what I have done and learnt here.</p>
 
-<p><strong>Github repos</strong>
-1. Paper Rock Scissors - <a href="https://github.com/jacywang/tealeaf_paper_rock_scissors">Procedural</a> and <a href="https://github.com/jacywang/oop_paper_rock_scissors/blob/master/paper_rock_scissors.rb">OOP</a>
-2. Tic Tac Toe - <a href="https://github.com/jacywang/tic_tac_toe">Procedural</a> and <a href="https://github.com/jacywang/oop_tic_tac_toe/blob/master/tic_tac_toe.rb">OOP</a>
-3. Madlibs - <a href="https://github.com/jacywang/madlibs">Procedural</a>
-4. Blackjack - <a href="https://github.com/jacywang/blackjack">Procedural</a>, <a href="https://github.com/jacywang/oop_blackjack/blob/master/blackjack.rb">OOP</a> and <a href="https://github.com/jacywang/blackjack_sinatra">Sinatra version</a></p>
+<p><strong>Github repos</strong></p>
 
-<p><strong>Concepts and tips to note</strong>
-- <em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name
-- To remove a directory with files inside, <code>rm -R dir</code>
-- Use pry to debugging</p>
+<ol>
+<li><p>Paper Rock Scissors - <a href="https://github.com/jacywang/tealeaf_paper_rock_scissors">Procedural</a> and <a href="https://github.com/jacywang/oop_paper_rock_scissors/blob/master/paper_rock_scissors.rb">OOP</a></p></li>
+<li><p>Tic Tac Toe - <a href="https://github.com/jacywang/tic_tac_toe">Procedural</a> and <a href="https://github.com/jacywang/oop_tic_tac_toe/blob/master/tic_tac_toe.rb">OOP</a></p></li>
+<li><p>Madlibs - <a href="https://github.com/jacywang/madlibs">Procedural</a></p></li>
+<li><p>Blackjack - <a href="https://github.com/jacywang/blackjack">Procedural</a>, <a href="https://github.com/jacywang/oop_blackjack/blob/master/blackjack.rb">OOP</a> and <a href="https://github.com/jacywang/blackjack_sinatra">Sinatra version</a></p></li>
+</ol>
+
+
+<p><strong>Concepts and tips to note</strong></p>
+
+<ul>
+<li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name</p></li>
+<li><p>To remove a directory with files inside, <code>rm -R dir</code></p></li>
+<li><p>Use pry to debugging</p></li>
+</ul>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -43,14 +51,19 @@
 
 
 <ul>
-<li>Variable scope
-<strong>More is coming shortly</strong></li>
+<li>Variable scope</li>
 </ul>
 
 
-<p><em>Tools and resources</em>
-- <a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a>
-- <a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></p>
+<p><strong>More is coming shortly</strong></p>
+
+<p><strong>Tools and resources</strong></p>
+
+<ul>
+<li><p><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></p></li>
+<li><p><a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></p></li>
+</ul>
+
 ]]></content>
   </entry>
   
