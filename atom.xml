@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-26T23:33:49-05:00</updated>
+  <updated>2014-11-26T23:35:27-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -24,7 +24,7 @@
 
 <p>For future reference, I will list what I have done and learnt here.</p>
 
-<p><strong>Github repos</strong></p>
+<h2>Github repos</h2>
 
 <ol>
 <li><p>Paper Rock Scissors - <a href="https://github.com/jacywang/tealeaf_paper_rock_scissors">Procedural</a> and <a href="https://github.com/jacywang/oop_paper_rock_scissors/blob/master/paper_rock_scissors.rb">OOP</a></p></li>
