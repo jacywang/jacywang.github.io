@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-27T21:41:17-05:00</updated>
+  <updated>2014-11-27T21:43:44-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -75,8 +75,12 @@ Sinatra is a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Halt the request</strong>
-<code>halt erb(:index)</code></p>
+<p><strong>Halt the request</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">halt</span> <span class="n">erb</span><span class="p">(</span><span class="ss">:index</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>For more information, check out its <a href="http://www.sinatrarb.com/intro.html">official intro</a>.</p>
 ]]></content>
