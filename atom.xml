@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-27T21:06:21-05:00</updated>
+  <updated>2014-11-27T21:40:22-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Post-it Note: Sinatra]]></title>
+    <link href="http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra/"/>
+    <updated>2014-11-27T21:13:31-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Review on Introduction to Ruby and Web Development]]></title>

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra/</loc>
+    <lastmod>2014-11-27T21:13:31-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development/</loc>
     <lastmod>2014-11-26T22:20:38-05:00</lastmod>
     <priority>0.8</priority>
@@ -12,13 +17,13 @@
   </url>
   <url>
     <loc>http://jacywang.github.io/blog/archives/</loc>
-    <lastmod>2014-11-27T21:06:21-05:00</lastmod>
+    <lastmod>2014-11-27T21:40:22-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://jacywang.github.io/</loc>
-    <lastmod>2014-11-27T21:06:21-05:00</lastmod>
+    <lastmod>2014-11-27T21:40:22-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
