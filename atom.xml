@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-11-26T23:35:27-05:00</updated>
+  <updated>2014-11-27T21:06:21-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -20,7 +20,7 @@
     <id>http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development</id>
     <content type="html"><![CDATA[<p>Just deployed the <a href="https://blackjack-sinatra-jw.herokuapp.com">Blackjack game</a> to heroku and this marks the end of <a href="https://www.gotealeaf.com">TeaLeaf Academy</a> first course - Introduction to Ruby and Web Development.</p>
 
-<p>Oct 26th, 2014 is the date that I started the program and it took me exactly one month to complete the course. I wouldn&rsquo;t say it&rsquo;s a hard course, but absolutely not easy. It has been a great experience for me!</p>
+<p>I started the program on Oct 26th, 2014 and it took me exactly one month to complete the course. I wouldn&rsquo;t say it&rsquo;s a hard course, but absolutely not easy. It has been such a great experience for me that I would highly recommend.</p>
 
 <p>For future reference, I will list what I have done and learnt here.</p>
 
@@ -37,9 +37,9 @@
 <h2>Concepts and tips to note</h2>
 
 <ul>
-<li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name</p></li>
-<li><p>To remove a directory with files inside, <code>rm -R dir</code></p></li>
-<li><p>Use pry to debugging</p></li>
+<li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name.</p></li>
+<li><p>To remove a directory with files inside, <code>rm -R dir</code>.</p></li>
+<li><p>Use pry to debugging.</p></li>
 </ul>
 
 
@@ -51,15 +51,21 @@
 
 
 <ul>
-<li>Variable scope <strong>More is coming shortly</strong></li>
+<li><p>OOP introduction from <a href="http://zetcode.com/lang/rubytutorial/oop/">zetcode.com</a>.</p></li>
+<li><p>There are so manny more to write that I will put them in separate blogs.</p></li>
 </ul>
 
 
 <h2>Tools and resources</h2>
 
 <ul>
-<li><p><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></p></li>
-<li><p><a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></p></li>
+<li><a href="https://www.gotealeaf.com/books">TeaLeaf Books</a></li>
+<li><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></li>
+<li><a href="http://www.paulgraham.com/makersschedule.html">Makers vs Managers</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></li>
+<li><a href="http://exercism.io/">Exercism</a></li>
+<li><a href="http://octopress.org/">Octopress</a></li>
+<li><a href="http://www.sinatrarb.com/intro.html">Sinatra</a></li>
 </ul>
 
 ]]></content>
