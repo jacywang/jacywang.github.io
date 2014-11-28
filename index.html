@@ -9,8 +9,8 @@
   <meta name="author" content="Jacy Wang">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the link and you can play with it.
+Sinatra &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,7 +98,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the <a href="https://blackjack-sinatra-jw.herokuapp.com">link</a> and you can play with it.
+Sinatra is a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> to build up web applications quickly in Ruby with minimal efforts. It&rsquo;s such a great tool that I want to write a post-it note.</p>
+
+<p>Include the gem <code>require 'sinatra'</code> and then <code>gem install sinatra</code></p>
+
+<p><strong>Routes</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">post</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Render template</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">erb</span> <span class="ss">:index</span>
+</span><span class='line'><span class="c1"># Disable default layout</span>
+</span><span class='line'><span class="n">erb</span> <span class="ss">:index</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="kp">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Helpers</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">helpers</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Before filter</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">before</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Halt the request</strong>
+<code>halt erb(:index)</code></p>
+
+<p>For more information, check out its <a href="http://www.sinatrarb.com/intro.html">official intro</a>.</p>
 </div>
   
   
