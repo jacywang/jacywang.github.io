@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tealeaf | Jacy Wang]]></title>
+  <link href="http://jacywang.github.io/blog/categories/tealeaf/atom.xml" rel="self"/>
+  <link href="http://jacywang.github.io/"/>
+  <updated>2014-11-30T19:49:46-05:00</updated>
+  <id>http://jacywang.github.io/</id>
+  <author>
+    <name><![CDATA[Jacy Wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Review on Introduction to Ruby and Web Development]]></title>
+    <link href="http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development/"/>
+    <updated>2014-11-26T22:20:38-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development</id>
+    <content type="html"><![CDATA[<p>Just deployed the <a href="https://blackjack-sinatra-jw.herokuapp.com">Blackjack game</a> to heroku and this marks the end of <a href="https://www.gotealeaf.com">TeaLeaf Academy</a> first course - Introduction to Ruby and Web Development.</p>
+
+<p>I started the program on Oct 26th, 2014 and it took me exactly one month to complete the course. I wouldn&rsquo;t say it&rsquo;s a hard course, but absolutely not easy. It has been such a great experience for me that I would highly recommend.</p>
+
+<p>For future reference, I will list what I have done and learnt here.</p>
+
+<h2>Github repos</h2>
+
+<ol>
+<li><p>Paper Rock Scissors - <a href="https://github.com/jacywang/tealeaf_paper_rock_scissors">Procedural</a> and <a href="https://github.com/jacywang/oop_paper_rock_scissors/blob/master/paper_rock_scissors.rb">OOP</a></p></li>
+<li><p>Tic Tac Toe - <a href="https://github.com/jacywang/tic_tac_toe">Procedural</a> and <a href="https://github.com/jacywang/oop_tic_tac_toe/blob/master/tic_tac_toe.rb">OOP</a></p></li>
+<li><p>Madlibs - <a href="https://github.com/jacywang/madlibs">Procedural</a></p></li>
+<li><p>Blackjack - <a href="https://github.com/jacywang/blackjack">Procedural</a>, <a href="https://github.com/jacywang/oop_blackjack/blob/master/blackjack.rb">OOP</a> and <a href="https://github.com/jacywang/blackjack_sinatra">Sinatra version</a></p></li>
+</ol>
+
+
+<h2>Concepts and tips to note</h2>
+
+<ul>
+<li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name.</p></li>
+<li><p>To remove a directory with files inside, <code>rm -R dir</code>.</p></li>
+<li><p>Use pry to debugging.
+<code>ruby
+require 'pry'
+binding.pry
+</code></p></li>
+<li><p>OOP introduction from <a href="http://zetcode.com/lang/rubytutorial/oop/">zetcode.com</a>.</p></li>
+<li><p>There are so manny more to write that I will put them in separate blogs.</p></li>
+</ul>
+
+
+<h2>Tools and resources</h2>
+
+<ul>
+<li><a href="https://www.gotealeaf.com/books">TeaLeaf Books</a></li>
+<li><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></li>
+<li><a href="http://www.paulgraham.com/makersschedule.html">Makers vs Managers</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></li>
+<li><a href="http://exercism.io/">Exercism</a></li>
+<li><a href="http://octopress.org/">Octopress</a></li>
+<li><a href="http://www.sinatrarb.com/intro.html">Sinatra</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

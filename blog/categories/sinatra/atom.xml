@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sinatra | Jacy Wang]]></title>
+  <link href="http://jacywang.github.io/blog/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://jacywang.github.io/"/>
+  <updated>2014-11-30T19:49:46-05:00</updated>
+  <id>http://jacywang.github.io/</id>
+  <author>
+    <name><![CDATA[Jacy Wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Post-it Note: Sinatra]]></title>
+    <link href="http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra/"/>
+    <updated>2014-11-27T21:13:31-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra</id>
+    <content type="html"><![CDATA[<p>As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the <a href="https://blackjack-sinatra-jw.herokuapp.com">link</a> and you can play with it.
+Sinatra is a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> to build up web applications quickly in Ruby with minimal efforts. It&rsquo;s such a great tool that I want to write a post-it note.</p>
+
+<p>Include the gem <code>require 'sinatra'</code> and then <code>gem install sinatra</code></p>
+
+<p><strong>Routes</strong>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">get</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span><span class="n">code</span><span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;post &amp;lsquo;/</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span><span class="n">code</span><span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>Render template</strong>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">erb</span> <span class="ss">:index</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;h1&gt;Disable default layout&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">erb</span> <span class="ss">:index</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="kp">false</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><strong>Helpers</strong>
+<code>ruby
+helpers do
+  ...code...
+end
+</code></p>
+
+<p><strong>Before filter</strong>
+<code>ruby
+before do
+  ...code...
+end
+</code></p>
+
+<p><strong>Halt the request</strong>
+<code>
+halt erb(:index)
+</code></p>
+
+<p>For more information, check out its <a href="http://www.sinatrarb.com/intro.html">official intro</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>
