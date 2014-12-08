@@ -1,24 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Jacy Wang]]></title>
-  <link href="http://jacywang.github.io/atom.xml" rel="self"/>
-  <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:27:41-05:00</updated>
-  <id>http://jacywang.github.io/</id>
-  <author>
-    <name><![CDATA[Jacy Wang]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ActiveRecord and Association Review - Jacy Wang</title>
+  <meta name="author" content="Jacy Wang">
 
   
-  <entry>
-    <title type="html"><![CDATA[ActiveRecord and Association Review]]></title>
-    <link href="http://jacywang.github.io/blog/2014/12/07/activerecord-and-association-review/"/>
-    <updated>2014-12-07T18:42:23-05:00</updated>
-    <id>http://jacywang.github.io/blog/2014/12/07/activerecord-and-association-review</id>
-    <content type="html"><![CDATA[<p>This is a review on what I have been through in Week 6 of TeaLeaf Academy.</p>
+  <meta name="description" content="This is a review on what I have been through in Week 6 of TeaLeaf Academy. Rails follow Active Record pattern to perform ORM duties. What&rsquo;s the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://jacywang.github.io/blog/2014/12/07/activerecord-and-association-review">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jacy Wang" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body   >
+  
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KWSWXT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWSWXT');</script>
+<!-- End Google Tag Manager -->
+
+
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jacy Wang</a></h1>
+  
+    <h2>A Digital Analyst and Ruby on Rails Apprentice.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:jacywang.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">ActiveRecord and Association Review</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-07T18:42:23-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:42 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>This is a review on what I have been through in Week 6 of TeaLeaf Academy.</p>
 
 <p>Rails follow Active Record pattern to perform ORM duties. What&rsquo;s the <em>Active Record pattern</em>?
 - classes to tables
@@ -163,157 +239,144 @@ We can create, retrieve, update, and delete the object instances by altering the
 
 
 <p><code>except</code> and <code>only</code> keywords can be used to add constrains on the routes.</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Post-it Note: Sinatra]]></title>
-    <link href="http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra/"/>
-    <updated>2014-11-27T21:13:31-05:00</updated>
-    <id>http://jacywang.github.io/blog/2014/11/27/post-it-note-sinatra</id>
-    <content type="html"><![CDATA[<p>As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the <a href="https://blackjack-sinatra-jw.herokuapp.com">link</a> and you can play with it.
-Sinatra is a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> to build up web applications quickly in Ruby with minimal efforts. It&rsquo;s such a great tool that I want to write a post-it note.</p>
 
-<p>Include the gem <code>require 'sinatra'</code> and then <code>gem install sinatra</code></p>
+<span class="byline author vcard">Posted by <span class="fn">Jacy Wang</span></span>
 
-<p><strong>Routes</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">post</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+      
 
 
-<p><strong>Render template</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">erb</span> <span class="ss">:index</span>
-</span><span class='line'><span class="c1"># Disable default layout</span>
-</span><span class='line'><span class="n">erb</span> <span class="ss">:index</span><span class="p">,</span> <span class="ss">layout</span><span class="p">:</span> <span class="kp">false</span>
-</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Helpers</strong></p>
+<time class='entry-date' datetime='2014-12-07T18:42:23-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:42 pm</span></time>
+      
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">helpers</span> <span class="k">do</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Before filter</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">before</span> <span class="k">do</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Halt the request</strong></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">halt</span> <span class="n">erb</span><span class="p">(</span><span class="ss">:index</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For more information, check out its <a href="http://www.sinatrarb.com/intro.html">official intro</a>.</p>
-]]></content>
-  </entry>
+<span class="categories">
   
-  <entry>
-    <title type="html"><![CDATA[Review on Introduction to Ruby and Web Development]]></title>
-    <link href="http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development/"/>
-    <updated>2014-11-26T22:20:38-05:00</updated>
-    <id>http://jacywang.github.io/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development</id>
-    <content type="html"><![CDATA[<p>Just deployed the <a href="https://blackjack-sinatra-jw.herokuapp.com">Blackjack game</a> to heroku and this marks the end of <a href="https://www.gotealeaf.com">TeaLeaf Academy</a> first course - Introduction to Ruby and Web Development.</p>
-
-<p>I started the program on Oct 26th, 2014 and it took me exactly one month to complete the course. I wouldn&rsquo;t say it&rsquo;s a hard course, but absolutely not easy. It has been such a great experience for me that I would highly recommend.</p>
-
-<p>For future reference, I will list what I have done and learnt here.</p>
-
-<h2>Github repos</h2>
-
-<ol>
-<li><p>Paper Rock Scissors - <a href="https://github.com/jacywang/tealeaf_paper_rock_scissors">Procedural</a> and <a href="https://github.com/jacywang/oop_paper_rock_scissors/blob/master/paper_rock_scissors.rb">OOP</a></p></li>
-<li><p>Tic Tac Toe - <a href="https://github.com/jacywang/tic_tac_toe">Procedural</a> and <a href="https://github.com/jacywang/oop_tic_tac_toe/blob/master/tic_tac_toe.rb">OOP</a></p></li>
-<li><p>Madlibs - <a href="https://github.com/jacywang/madlibs">Procedural</a></p></li>
-<li><p>Blackjack - <a href="https://github.com/jacywang/blackjack">Procedural</a>, <a href="https://github.com/jacywang/oop_blackjack/blob/master/blackjack.rb">OOP</a> and <a href="https://github.com/jacywang/blackjack_sinatra">Sinatra version</a></p></li>
-</ol>
-
-
-<h2>Concepts and tips to note</h2>
-
-<ul>
-<li><p><em>Namespace</em> is a way to group classes in Ruby and differentiate from other classes with the same name.</p></li>
-<li><p>To remove a directory with files inside, <code>rm -R dir</code>.</p></li>
-<li><p>Use pry to debugging.</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;pry&#39;</span>
-</span><span class='line'><span class="nb">binding</span><span class="o">.</span><span class="n">pry</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><p>OOP introduction from <a href="http://zetcode.com/lang/rubytutorial/oop/">zetcode.com</a>.</p></li>
-<li><p>There are so manny more to write that I will put them in separate blogs.</p></li>
-</ul>
-
-
-<h2>Tools and resources</h2>
-
-<ul>
-<li><a href="https://www.gotealeaf.com/books">TeaLeaf Books</a></li>
-<li><a href="http://blog.codinghorror.com/rubber-duck-problem-solving/">Rubber Duck Debugging</a></li>
-<li><a href="http://www.paulgraham.com/makersschedule.html">Makers vs Managers</a></li>
-<li><a href="https://help.github.com/articles/github-flavored-markdown/">Github Flavored Markdown</a></li>
-<li><a href="http://exercism.io/">Exercism</a></li>
-<li><a href="http://octopress.org/">Octopress</a></li>
-<li><a href="http://www.sinatrarb.com/intro.html">Sinatra</a></li>
-</ul>
-
-]]></content>
-  </entry>
+    <a class='category' href='/blog/categories/activerecord/'>activerecord</a>, <a class='category' href='/blog/categories/association/'>association</a>, <a class='category' href='/blog/categories/migration/'>migration</a>
   
-  <entry>
-    <title type="html"><![CDATA[Start My New Journey]]></title>
-    <link href="http://jacywang.github.io/blog/2014/11/23/start-my-new-journey/"/>
-    <updated>2014-11-23T16:25:29-05:00</updated>
-    <id>http://jacywang.github.io/blog/2014/11/23/start-my-new-journey</id>
-    <content type="html"><![CDATA[<p>Today is Nov 23rd, 2014 and I just finished Lesson 3 on TeaLeaf Academy.</p>
+</span>
 
-<p>It has been three weeks since I joined the program and I was surprised by the progress I made. In three weeks, I built up three games in two different approach, procedural and OO. Then game Blackjack was upgraded from the command line to the web by using Sinatra. And today I have my own blog based on <a href="http://octopress.org/">Octopress</a>. This is awesome!</p>
 
-<p>Before joining the program, I have been going through different tutorials online but in the end, I&rsquo;m still wondering where I should start and lacking confidence in building up web applications. After doing a lot of research and visiting bootcamps in Toronto, I chose TeaLeaf because it&rsquo;s online, cheaper and I don&rsquo;t need to quit my full time job. Its alumni also gave very positive feedback.</p>
-
-<p>Why am I doing this? To make more money. Yes, that&rsquo;s why I started. But as I get more and more knowledge and practice, it becomes more and more interesting for me. I love it! Two hours a day from Monday to Friday and over 10 hours in the weekend were spent on it. I&rsquo;m addicted to it, like chocolate.</p>
-
-<p>I know it&rsquo;s a long process and requires patience and commitment to become really good at it. But it&rsquo;s never too late to start. I would like to record this experience and write down the tips I learnt and mistakes I made.</p>
-
-<p><code>Hello world!</code></p>
-]]></content>
-  </entry>
+    </p>
+    
+      <div class="sharing">
   
-</feed>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://jacywang.github.io/blog/2014/12/07/activerecord-and-association-review/" data-via="jacywanggo" data-counturl="http://jacywang.github.io/blog/2014/12/07/activerecord-and-association-review/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/11/27/post-it-note-sinatra/" title="Previous Post: Post-it Note: Sinatra">&laquo; Post-it Note: Sinatra</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/07/activerecord-and-association-review/">ActiveRecord and Association Review</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/27/post-it-note-sinatra/">Post-it Note: Sinatra</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/26/review-on-introduction-to-ruby-and-web-development/">Review on Introduction to Ruby and Web Development</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/11/23/start-my-new-journey/">Start My New Journey</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  
+  <a href="https://github.com/jacywang">@jacywang</a> on GitHub
+  
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jacywang',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Jacy Wang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

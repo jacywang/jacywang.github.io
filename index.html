@@ -9,8 +9,7 @@
   <meta name="author" content="Jacy Wang">
 
   
-  <meta name="description" content="As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the link and you can play with it.
-Sinatra &hellip;">
+  <meta name="description" content="This is a review on what I have been through in Week 6 of TeaLeaf Academy. Rails follow Active Record pattern to perform ORM duties. What&rsquo;s the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +75,179 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/07/activerecord-and-association-review/">ActiveRecord and Association Review</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-07T18:42:23-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>6:42 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a review on what I have been through in Week 6 of TeaLeaf Academy.</p>
+
+<p>Rails follow Active Record pattern to perform ORM duties. What&rsquo;s the <em>Active Record pattern</em>?
+- classes to tables
+- objects to rows of data within that table
+- getters/setters(attributes) to columns in that table
+We can create, retrieve, update, and delete the object instances by altering the database table.</p>
+
+<p>To create a table in the database, we can use migrations, <code>rails generate migration create_posts</code>. In the migration file,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">CreatePosts</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">change</span>
+</span><span class='line'>    <span class="n">create_table</span> <span class="ss">:posts</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:url</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:title</span>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">text</span> <span class="ss">:description</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After we run <code>rake db:migrate</code> in the command line, it will create six columns in the database,
+<strong>1. primary key: id
+2. url
+3. title
+4. description
+5. created_at
+6. updated_at</strong></p>
+
+<p>Then in the app/models folder, we will create the corresponding model,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The file name will be in singular form, <code>post.rb</code>.</p>
+
+<p><strong>Tips on table name: use the tableize method on the class name. For example, <code>'Post'.tableize</code> => &ldquo;posts&rdquo;.</strong></p>
+
+<p>If we have a Comment model and there is a 1:M association between Post and Comment, a <code>foreign_key</code> column - <code>post_id</code> need to be added to the comments table and it will point to the primary key column in the posts table. Then in the Post and Comment model file, we will do the following changes.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:comments</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Comment</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:post</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If there is a Category model and it has a M:M association with Post, a joint model and table will be needed to build up the association. The model file name will be <code>post_category.rb</code> and class name will be <code>PostCategory</code>. To get the table name, <code>'PostCategory'.tableize</code> and the output is &lsquo;post_categories&rsquo;. There will be two foreign key columns in the table, <code>post_id</code> and <code>category_id</code>. In the model file, we will set up the <code>has_many :through</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Category</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:post_categories</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:posts</span><span class="p">,</span> <span class="ss">through</span><span class="p">:</span> <span class="ss">:post_categories</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:comments</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:post_categories</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:categories</span><span class="p">,</span> <span class="ss">through</span><span class="p">:</span> <span class="ss">:post_categories</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To change the default association name,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Post</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:creator</span><span class="p">,</span> <span class="ss">foreign_key</span><span class="p">:</span> <span class="s1">&#39;user_id&#39;</span><span class="p">,</span> <span class="ss">class_name</span><span class="p">:</span> <span class="s1">&#39;User&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will make <code>post.creator</code> work.</p>
+
+<p>Keyword <code>resources</code> can be used to generate routes.
+<code>resources :posts</code> will make the following routes available,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">posts</span> <span class="no">GET</span>   <span class="sr">/posts(.:format)          posts#index</span>
+</span><span class='line'><span class="sr">      POST  /</span><span class="n">posts</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span>          <span class="n">posts</span><span class="c1">#create</span>
+</span><span class='line'> <span class="n">new_post</span> <span class="no">GET</span>   <span class="sr">/posts/ne</span><span class="n">w</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span>      <span class="n">posts</span><span class="c1">#new</span>
+</span><span class='line'><span class="n">edit_post</span> <span class="no">GET</span>   <span class="sr">/posts/</span><span class="ss">:id</span><span class="o">/</span><span class="n">edit</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span> <span class="n">posts</span><span class="c1">#edit</span>
+</span><span class='line'> <span class="n">post</span> <span class="no">GET</span>   <span class="sr">/posts/</span><span class="ss">:id</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span>      <span class="n">posts</span><span class="c1">#show</span>
+</span><span class='line'>      <span class="no">PATCH</span> <span class="sr">/posts/</span><span class="ss">:id</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span>      <span class="n">posts</span><span class="c1">#update</span>
+</span><span class='line'>      <span class="no">PUT</span>   <span class="sr">/posts/</span><span class="ss">:id</span><span class="p">(</span><span class="o">.</span><span class="ss">:format</span><span class="p">)</span>      <span class="n">posts</span><span class="c1">#update</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To create nested routes like /posts/:id/comments/:id, we can use nested resources,</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">resources</span> <span class="ss">:posts</span><span class="p">,</span> <span class="ss">except</span><span class="p">:</span> <span class="o">[</span><span class="ss">:destroy</span><span class="o">]</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">resources</span> <span class="ss">:comments</span><span class="p">,</span> <span class="ss">only</span><span class="p">:</span> <span class="o">[</span><span class="ss">:create</span><span class="o">]</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>except</code> and <code>only</code> keywords can be used to add constrains on the routes.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -298,6 +470,10 @@ Sinatra is a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/07/activerecord-and-association-review/">ActiveRecord and Association Review</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/11/27/post-it-note-sinatra/">Post-it Note: Sinatra</a>
