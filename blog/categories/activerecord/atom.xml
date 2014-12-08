@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Activerecord | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/activerecord/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:52:09-05:00</updated>
+  <updated>2014-12-07T23:56:32-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -132,7 +132,7 @@ edit_post | GET   | /posts/:id/edit(.:format) | posts#edit
           | PATCH | /posts/:id(.:format)      | posts#update
           | PUT   | /posts/:id(.:format)      | posts#update
 </code>
-To create nested routes like /posts/:id/comments/:id, we can use nested resources,
+To create nested routes like <code>/posts/:id/comments/:id</code>, we can use nested resources,
 <code>ruby
 resources :posts, except: [:destroy] do
   resources :comments, only: [:create]
