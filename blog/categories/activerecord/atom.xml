@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Activerecord | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/activerecord/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:42:10-05:00</updated>
+  <updated>2014-12-07T23:43:20-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -60,16 +60,17 @@
 </span><span class='line'><span class="sr">end</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>After we run <code>rake db:migrate</code> in the command line, it will create six columns in the database,</p>
-
-<p>*1. primary key: id</p>
+<p>After we run <code>rake db:migrate</code> in the command line, it will create six columns in the database,
+*
+1. primary key: id</p>
 
 <ol>
 <li><p>url</p></li>
 <li><p>title</p></li>
 <li><p>description</p></li>
 <li><p>created_at</p></li>
-<li><p>updated_at*</p></li>
+<li><p>updated_at
+*</p></li>
 </ol>
 
 
