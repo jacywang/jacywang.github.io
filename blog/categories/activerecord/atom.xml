@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Activerecord | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/activerecord/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:30:10-05:00</updated>
+  <updated>2014-12-07T23:42:10-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -60,13 +60,18 @@
 </span><span class='line'><span class="sr">end</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>After we run <code>rake db:migrate</code> in the command line, it will create six columns in the database,
-<strong>1. primary key: id
-2. url
-3. title
-4. description
-5. created_at
-6. updated_at</strong></p>
+<p>After we run <code>rake db:migrate</code> in the command line, it will create six columns in the database,</p>
+
+<p>*1. primary key: id</p>
+
+<ol>
+<li><p>url</p></li>
+<li><p>title</p></li>
+<li><p>description</p></li>
+<li><p>created_at</p></li>
+<li><p>updated_at*</p></li>
+</ol>
+
 
 <p>Then in the app/models folder, we will create the corresponding model,
 <code>ruby
@@ -75,7 +80,7 @@ end
 </code>
 The file name will be in singular form, <code>post.rb</code>.</p>
 
-<p><strong>Tips on table name: use the tableize method on the class name. For example, <code>'Post'.tableize</code> => &ldquo;posts&rdquo;.</strong></p>
+<p><em>Tips on table name: use the tableize method on the class name. For example, <code>'Post'.tableize</code> => &ldquo;posts&rdquo;.</em></p>
 
 <p>If we have a Comment model and there is a 1:M association between Post and Comment, a <code>foreign_key</code> column - <code>post_id</code> need to be added to the comments table and it will point to the primary key column in the posts table. Then in the Post and Comment model file, we will do the following changes.
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
