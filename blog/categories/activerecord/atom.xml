@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Activerecord | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/activerecord/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:29:25-05:00</updated>
+  <updated>2014-12-07T23:30:10-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -23,9 +23,9 @@
 <p>Rails follow Active Record pattern to perform ORM duties. What&rsquo;s the <em>Active Record pattern</em>?</p>
 
 <ul>
-<li>classes to tables</li>
-<li>objects to rows of data within that table</li>
-<li>getters/setters(attributes) to columns in that table</li>
+<li><p>classes to tables</p></li>
+<li><p>objects to rows of data within that table</p></li>
+<li><p>getters/setters(attributes) to columns in that table</p></li>
 </ul>
 
 
