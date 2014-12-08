@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Activerecord | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/activerecord/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:46:32-05:00</updated>
+  <updated>2014-12-07T23:52:09-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -122,13 +122,15 @@ This will make</code>post.creator` work.</p>
 <p>Keyword <code>resources</code> can be used to generate routes.
 <code>resources :posts</code> will make the following routes available,
 <code>ruby
-    posts GET   /posts(.:format)          posts#index
-          POST  /posts(.:format)          posts#create
- new_post GET   /posts/new(.:format)      posts#new
-edit_post GET   /posts/:id/edit(.:format) posts#edit
-     post GET   /posts/:id(.:format)      posts#show
-          PATCH /posts/:id(.:format)      posts#update
-          PUT   /posts/:id(.:format)      posts#update
+   Prefix | Verb  | URI Pattern               | Controller#Action
+   -------|-------|---------------------------|------------------
+    posts | GET   | /posts(.:format)          | posts#index
+          | POST  | /posts(.:format)          | posts#create
+ new_post | GET   | /posts/new(.:format)      | posts#new
+edit_post | GET   | /posts/:id/edit(.:format) | posts#edit
+     post | GET   | /posts/:id(.:format)      | posts#show
+          | PATCH | /posts/:id(.:format)      | posts#update
+          | PUT   | /posts/:id(.:format)      | posts#update
 </code>
 To create nested routes like /posts/:id/comments/:id, we can use nested resources,
 <code>ruby
