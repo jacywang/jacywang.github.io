@@ -3,7 +3,7 @@ layout: post
 title: "Post-it Note: Sinatra"
 date: 2014-11-27 21:13:31 -0500
 comments: true
-categories: 
+categories: Sinatra
 ---
 As mentioned in my previous blog, I just built up a simple online Blackjack game based on Sinatra. Here is the [link](https://blackjack-sinatra-jw.herokuapp.com) and you can play with it. 
 Sinatra is a [DSL](http://en.wikipedia.org/wiki/Domain-specific_language) to build up web applications quickly in Ruby with minimal efforts. It's such a great tool that I want to write a post-it note.

@@ -3,7 +3,7 @@ layout: post
 title: "Review on Introduction to Ruby and Web Development"
 date: 2014-11-26 22:20:38 -0500
 comments: true
-categories: 
+categories: TeaLeaf
 ---
 Just deployed the [Blackjack game](https://blackjack-sinatra-jw.herokuapp.com) to heroku and this marks the end of [TeaLeaf Academy](https://www.gotealeaf.com) first course - Introduction to Ruby and Web Development.
 
