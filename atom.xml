@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-22T22:00:16-05:00</updated>
+  <updated>2014-12-22T22:01:51-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -28,7 +28,7 @@
 
 <p>After the three steps, virtual attributes <code>password</code> and <code>password_confirmation</code> and <code>authenticate()</code> method can be used in our app.</p>
 
-<p>When <code>user.authenticate(password)</code> is true, it will return the <code>user</code> object. Otherwise, it will return false.</p>
+<p>When <code>user.authenticate(password)</code> is true, it will return the <code>user</code> object. Otherwise, it will return <code>false</code>.</p>
 ]]></content>
   </entry>
   
