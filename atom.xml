@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-22T21:38:26-05:00</updated>
+  <updated>2014-12-22T21:59:24-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -18,7 +18,9 @@
     <link href="http://jacywang.github.io/blog/2014/12/22/has-secure-password/"/>
     <updated>2014-12-22T21:33:45-05:00</updated>
     <id>http://jacywang.github.io/blog/2014/12/22/has-secure-password</id>
-    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong></p>
+    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong>
+First, add <code>has_secure_password</code> method to the <code>User</code> model which will allow us to save the password through &ldquo;one-way hash&rdquo;, meaning the hash of the password strings will each turn into long, undecipherable tockens.
+Second, add a new column <code>password_digest</code> to the <code>users</code> table to save the password token.</p>
 ]]></content>
   </entry>
   

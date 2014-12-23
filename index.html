@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="How do we save password to the database in rails?
-">
+First, add has_secure_password method to the User model which will allow us to save the password &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,7 +98,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </header>
 
 
-  <div class="entry-content"><p><strong>How do we save password to the database in rails?</strong></p>
+  <div class="entry-content"><p><strong>How do we save password to the database in rails?</strong>
+First, add <code>has_secure_password</code> method to the <code>User</code> model which will allow us to save the password through &ldquo;one-way hash&rdquo;, meaning the hash of the password strings will each turn into long, undecipherable tockens.
+Second, add a new column <code>password_digest</code> to the <code>users</code> table to save the password token.</p>
 </div>
   
   
