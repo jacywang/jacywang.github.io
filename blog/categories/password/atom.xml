@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Password | Jacy Wang]]></title>
+  <link href="http://jacywang.github.io/blog/categories/password/atom.xml" rel="self"/>
+  <link href="http://jacywang.github.io/"/>
+  <updated>2014-12-22T21:38:26-05:00</updated>
+  <id>http://jacywang.github.io/</id>
+  <author>
+    <name><![CDATA[Jacy Wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Has_secure_password]]></title>
+    <link href="http://jacywang.github.io/blog/2014/12/22/has-secure-password/"/>
+    <updated>2014-12-22T21:33:45-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/12/22/has-secure-password</id>
+    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

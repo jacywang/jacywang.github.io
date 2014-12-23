@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-07T23:56:32-05:00</updated>
+  <updated>2014-12-22T21:38:26-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Has_secure_password]]></title>
+    <link href="http://jacywang.github.io/blog/2014/12/22/has-secure-password/"/>
+    <updated>2014-12-22T21:33:45-05:00</updated>
+    <id>http://jacywang.github.io/blog/2014/12/22/has-secure-password</id>
+    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ActiveRecord and Association Review]]></title>
