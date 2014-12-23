@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Password | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/password/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-22T21:59:24-05:00</updated>
+  <updated>2014-12-22T22:00:16-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -18,9 +18,17 @@
     <link href="http://jacywang.github.io/blog/2014/12/22/has-secure-password/"/>
     <updated>2014-12-22T21:33:45-05:00</updated>
     <id>http://jacywang.github.io/blog/2014/12/22/has-secure-password</id>
-    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong>
-First, add <code>has_secure_password</code> method to the <code>User</code> model which will allow us to save the password through &ldquo;one-way hash&rdquo;, meaning the hash of the password strings will each turn into long, undecipherable tockens.
-Second, add a new column <code>password_digest</code> to the <code>users</code> table to save the password token.</p>
+    <content type="html"><![CDATA[<p><strong>How do we save password to the database in rails?</strong></p>
+
+<p>First, add <code>has_secure_password</code> method to the <code>User</code> model which will allow us to save the password through &ldquo;one-way hash&rdquo;, meaning the hash of the password strings will each turn into long, undecipherable tockens.</p>
+
+<p>Second, add a new column <code>password_digest</code> to the <code>users</code> table to save the password token. The password string should never be stored in the application and they can only be digested. If you register at a site and they send you your password in plain text, do not trust the site.</p>
+
+<p>Then make sure gem <code>bcrypt-ruby</code> installed.</p>
+
+<p>After the three steps, virtual attributes <code>password</code> and <code>password_confirmation</code> and <code>authenticate()</code> method can be used in our app.</p>
+
+<p>When <code>user.authenticate(password)</code> is true, it will return the <code>user</code> object. Otherwise, it will return false.</p>
 ]]></content>
   </entry>
   
