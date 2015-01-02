@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Migration | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/migration/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2014-12-22T22:02:24-05:00</updated>
+  <updated>2015-01-01T23:04:54-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -98,31 +98,33 @@ The file name will be in singular form, <code>post.rb</code>.</p>
 </span><span class='line'><span class="sr">end</span>
 </span></code></pre></td></tr></table></div></figure></p>
 
-<p>If there is a Category model and it has a M:M association with Post, a joint model and table will be needed to build up the association. The model file name will be <code>post_category.rb</code> and class name will be <code>PostCategory</code>. To get the table name, <code>'PostCategory'.tableize</code> and the output is &lsquo;post_categories&rsquo;. There will be two foreign key columns in the table, <code>post_id</code> and <code>category_id</code>. In the model file, we will set up the <code>has_many :through</code>.
-&#8220;`ruby
-class Category &lt; ActiveRecord::Base
+<p>If there is a Category model and it has a M:M association with Post, a joint model and table will be needed to build up the association. The model file name will be <code>post_category.rb</code> and class name will be <code>PostCategory</code>. To get the table name, <code>'PostCategory'.tableize</code> and the output is &lsquo;post_categories&rsquo;. There will be two foreign key columns in the table, <code>post_id</code> and <code>category_id</code>. In the model file, we will set up the <code>has_many :through</code>.</p>
+
+<pre><code class="ruby">class Category &lt; ActiveRecord::Base
   has_many :post_categories
   has_many :posts, through: :post_categories
-end</p>
+end
 
-<p>class Post &lt; ActiveRecord::Base
+class Post &lt; ActiveRecord::Base
   has_many :comments
   has_many :post_categories
   has_many :categories, through: :post_categories
 end
-<code>
-To change the default association name,
-</code>ruby
-class Post &lt; ActiveRecord::Base
-  belongs_to :creator, foreign_key: &lsquo;user_id&rsquo;, class_name: &lsquo;User&rsquo;
+</code></pre>
+
+<p>To change the default association name,</p>
+
+<pre><code class="ruby">class Post &lt; ActiveRecord::Base
+  belongs_to :creator, foreign_key: 'user_id', class_name: 'User'
 end
-<code>``
-This will make</code>post.creator` work.</p>
+</code></pre>
+
+<p>This will make <code>post.creator</code> work.</p>
 
 <p>Keyword <code>resources</code> can be used to generate routes.
-<code>resources :posts</code> will make the following routes available,
-<code>ruby
-   Prefix | Verb  | URI Pattern               | Controller#Action
+<code>resources :posts</code> will make the following routes available,</p>
+
+<pre><code class="ruby">   Prefix | Verb  | URI Pattern               | Controller#Action
    -------|-------|---------------------------|------------------
     posts | GET   | /posts(.:format)          | posts#index
           | POST  | /posts(.:format)          | posts#create
@@ -131,14 +133,16 @@ edit_post | GET   | /posts/:id/edit(.:format) | posts#edit
      post | GET   | /posts/:id(.:format)      | posts#show
           | PATCH | /posts/:id(.:format)      | posts#update
           | PUT   | /posts/:id(.:format)      | posts#update
-</code>
-To create nested routes like <code>/posts/:id/comments/:id</code>, we can use nested resources,
-<code>ruby
-resources :posts, except: [:destroy] do
+</code></pre>
+
+<p>To create nested routes like <code>/posts/:id/comments/:id</code>, we can use nested resources,</p>
+
+<pre><code class="ruby">resources :posts, except: [:destroy] do 
   resources :comments, only: [:create]
 end
-</code>
-<code>except</code> and <code>only</code> keywords can be used to add constrains on the routes.</p>
+</code></pre>
+
+<p><code>except</code> and <code>only</code> keywords can be used to add constrains on the routes.</p>
 ]]></content>
   </entry>
   
