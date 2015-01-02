@@ -4,7 +4,7 @@
   <title><![CDATA[Jacy Wang]]></title>
   <link href="http://jacywang.github.io/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2015-01-01T23:04:54-05:00</updated>
+  <updated>2015-01-01T23:08:02-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -20,7 +20,7 @@
     <id>http://jacywang.github.io/blog/2015/01/01/login-slash-logout-from-scratch</id>
     <content type="html"><![CDATA[<p>In general, we can use authentication gems like <a href="https://github.com/plataformatec/devise">Devise</a> and <a href="https://github.com/intridea/omniauth">OmniAuth</a> to build up the login and logout process. But here, we will start from scratch and implement it in our <a href="https://postit-jw.herokuapp.com/">postit</a>.</p>
 
-<p>First we will add <code>has_secure_password</code> to the &lsquo;user&rsquo; model. In the <code>user.rb</code> file,</p>
+<p>First we will add <code>has_secure_password</code> to the <code>user</code> model. In the <code>user.rb</code> file,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -29,7 +29,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The above code adds virtual attribute <code>password</code> and its validations only happens when the user is created.</p>
+<p>The above code adds virtual attribute <code>password</code> and its validations only happen when the user is created.</p>
 
 <p>Then <code>password_digest</code> column should be added to <code>users</code> table to save the digested password string from the user input.</p>
 

@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="entry-content"><p>In general, we can use authentication gems like <a href="https://github.com/plataformatec/devise">Devise</a> and <a href="https://github.com/intridea/omniauth">OmniAuth</a> to build up the login and logout process. But here, we will start from scratch and implement it in our <a href="https://postit-jw.herokuapp.com/">postit</a>.</p>
 
-<p>First we will add <code>has_secure_password</code> to the &lsquo;user&rsquo; model. In the <code>user.rb</code> file,</p>
+<p>First we will add <code>has_secure_password</code> to the <code>user</code> model. In the <code>user.rb</code> file,</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -105,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The above code adds virtual attribute <code>password</code> and its validations only happens when the user is created.</p>
+<p>The above code adds virtual attribute <code>password</code> and its validations only happen when the user is created.</p>
 
 <p>Then <code>password_digest</code> column should be added to <code>users</code> table to save the digested password string from the user input.</p>
 
