@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Association | Jacy Wang]]></title>
   <link href="http://jacywang.github.io/blog/categories/association/atom.xml" rel="self"/>
   <link href="http://jacywang.github.io/"/>
-  <updated>2015-01-01T23:11:20-05:00</updated>
+  <updated>2015-01-02T21:55:51-05:00</updated>
   <id>http://jacywang.github.io/</id>
   <author>
     <name><![CDATA[Jacy Wang]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Polymorphic Associations]]></title>
+    <link href="http://jacywang.github.io/blog/2015/01/02/polymorphic-associations/"/>
+    <updated>2015-01-02T21:53:02-05:00</updated>
+    <id>http://jacywang.github.io/blog/2015/01/02/polymorphic-associations</id>
+    <content type="html"><![CDATA[<p>In our app <a href="https://postit-jw.herokuapp.com/">postit</a>, the <code>vote</code> function is applied to both <code>Post</code> model and <code>Comment</code> model. A post has many votes and a comment also has many votes. In this case, we will use polymorphic associations.</p>
+
+<p>First we will add votes table, <code>rails generate migration create_votes</code>.</p>
+
+<pre><code class="ruby">class CreateVotes &lt; ActiveRecord::Migration
+  def change
+    create_table :votes do |t|
+      t.boolean :vote
+      t.integer :user_id
+      # t.references :voteable, polymorphic: true
+      t.string :voteable_type
+      t.integer :voteable_id
+
+      t.timestamps
+    end
+  end
+end
+</code></pre>
+
+<p>In the command line, run <code>rake db:migrate</code>.</p>
+
+<p><code>:voteable_type</code> column will record the model class name and <code>:voteable_id</code> will record the object ID that&rsquo;s voted on.</p>
+
+<p>Then the following changes should be applied,</p>
+
+<pre><code class="ruby"># vote.rb
+class Vote &lt; ActiveRecord::Base
+  belongs_to :creator, foreign_key: "user_id", class_name: "User"
+  belongs_to :voteable, polymorphic: true
+
+  validates_uniqueness_of :creator, scope: :voteable
+end
+
+# post.rb
+class Post &lt; ActiveRecord::Base
+  has_many :votes, as: :voteable
+end
+
+# comment.rb
+class Comment &lt; ActiveRecord::Base
+  has_many :votes, as: :voteable
+end
+
+# user.rb
+class User &lt; ActiveRecord::Base
+  has_many :votes
+end
+</code></pre>
+
+<p>Now we can retrieve <code>@post.votes</code> and set the vote by <code>vote.post = Post.first</code>. Good to go!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ActiveRecord and Association Review]]></title>
